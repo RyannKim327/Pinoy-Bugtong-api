@@ -8,7 +8,7 @@ app.listen(port, () => {
 	console.log("Connected")
 })
 
-app.get("/", (req, res) => {
+app.use("/", (req, res) => {
 	let data = JSON.parse(fs.readFileSync("data/list.json", "utf8"))
 	let bugtong = data[Math.floor(Math.random() * data.length)]
 	res.send(bugtong)
