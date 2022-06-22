@@ -1,15 +1,16 @@
 {
-  "name": "Pinoy-Bugtong-api",
+  "name": "Pinoy-Bugtong-Api",
   "version": "1.0.0",
-  "description": "Wala kasi akong makitang api, kaya gumawa ako.",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "RyannKim327",
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "fs": "0.0.1-security"
   }
 }
