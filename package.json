@@ -1,0 +1,15 @@
+{
+  "name": "Pinoy-Bugtong-api",
+  "version": "1.0.0",
+  "description": "Wala kasi akong makitang api, kaya gumawa ako.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "RyannKim327",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
