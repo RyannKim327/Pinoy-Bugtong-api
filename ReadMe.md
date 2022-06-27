@@ -7,8 +7,8 @@
 ``` NodeJS
 const axios = require("axios")
 
-async function riddle(){
-	let output = await axios.get("url").then((result) => {
+async function bugtong(){
+	let output = await axios.get("https://ryannkim327.github.io/Pinoy-Bugtong-API").then((result) => {
 		return result.data
 	}).catch((error) => {
 		console.error("Error [Api Riddle]: " + error)
@@ -18,16 +18,20 @@ async function riddle(){
 }
 
 module.exports = async () => {
-	let data = await riddle()
-	console.log(data)
+	let data = await bugtong()
+	if(data == null){
+		console.log("Check your console")
+	}else{
+		console.log(data)
+	}
 }
 ```
 
 ###### Output:
 ``` JSON
 {
-	"bugtong": "Sample Riddle",
-	"sagot": "Sample Answer"
+	"b": "Sample Riddle",
+	"b": "Sample Answer"
 }
 ```
 
