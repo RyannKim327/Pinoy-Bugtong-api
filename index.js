@@ -66,7 +66,7 @@ app.get("/", (req, res) => {
 			"s": atob("ZGFsaXJp") // 15
 		},
 		{
-			"b": atob("QW5nIGJpbnRhbmEgYXkgdGF0bG8sIG5haXNhc2FyYSBsYW5nIGF5IHRhdGxv"),
+			"b": atob("QW5nIGJpbnRhbmEgYXkgcGl0bywgbmFpc2FzYXJhIGxhbmcgYXQgdGF0bG8="),
 			"s": atob("bXVraGE=") // 16
 		},
 		{
