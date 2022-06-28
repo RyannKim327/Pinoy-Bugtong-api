@@ -38,7 +38,7 @@ app.get("/", (req, res) => {
 			"s": atob("dGFv") // 8
 		}
 	]
-	res.send(a[Math.floor(Math.random() * a.length)])
+	res.send(JSON.stringify(a[Math.floor(Math.random() * a.length)]))
 })
 
 app.listen(port, () => {
