@@ -100,6 +100,10 @@ app.get("/", (req, res) => {
 		{
 			"b": atob("S2FwaXJhc29uZyB0ZWxhbmcgdGFncGktdGFncGksIGlnaW5hZ2FsYW5nIG5nIGF0aW5nIGxhaGk="),
 			"s": atob("d2F0YXdhdA==") // 24
+		},
+		{
+			"b": atob("S2FwaXJhc29uZyBwYXRwYXQsIHR1bWF3aWQgbmcgZGFnYXQsIHVtYWt5YXQgbmcgYnVuZG9rLCBuYWd0YWJveSBuZyBoYXlvcA=="),
+			"s": atob("c3V5b2Q=") // 25
 		}
 	]
 	res.send(JSON.stringify(a[Math.floor(Math.random() * a.length)]))
