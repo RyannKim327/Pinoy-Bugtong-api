@@ -4,7 +4,8 @@ const app = express()
 const port = process.env.PORT || 3000
 
 app.get("/documentation", (req, res) => {
-	res.send("Kindly visit <a href=\"https://github.com/RyannKim327/Pinoy-Bugtong-Api\">API DOCUMENTATION</a>")
+	//res.send("Kindly visit <a href=\"https://github.com/RyannKim327/Pinoy-Bugtong-Api\">API DOCUMENTATION</a>")
+	res.sendFile(__dirname + "/docs.html")
 })
 
 app.get("/", (req, res) => {

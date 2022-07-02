@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			:root{
+				--main_background: #efefef;
+				--div_background: #dedede;
+			}
+			.head, .foot{
+				margin: 5px 10px;
+				text-align: center;
+				background-color: var(--div_background);
+				color: #000000;
+				border-radius: 5px;
+				padding: 5px;
+			}
+			.head > h3, .head > h5{
+				padding: 5px;
+			}
+			.head h3{
+				font-family: 'Times New Roman', serif;
+			}
+			.head h5{
+				font-family: 'Courier New', monosoace;
+			}
+			.body{
+				background-color: var(--main_background);
+				border-radius: 5px;
+				padding: 5px;
+				margin: 5px 10px;
+			}
+			blockquote{
+				margin: 2px;
+				border-left: 3px var(--div_background) solid;
+				padding-left: 5px;
+			}
+			.body table{
+				margin: 10px;
+			}
+			.body table th{
+				background-color: var(--div_background);
+				padding: 2px 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="head">
+			<h3>Welcome to</h3>
+			<h5>Bugtong API Documentation</h5>
+		</div>
+		<div class="body">
+			<blockquote>
+				&emsp;Since I can't find a free API for Filipino Riddles, I try to create my own API. Here's the documentation on how to use this API.
+			</blockquote>
+			<p>Call: https://api-pinoy-bugtong.vercel.app/</p>
+			<p>Results</p>
+			<table>
+				<tr>
+					<th>Key</th>
+					<th>Meaning</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<th>"b"</th>
+					<td>Bugtong/Riddle</td>
+					<td>A String value or literally the riddle.</td>
+				</tr>
+				<tr>
+					<th>"s"</th>
+					<td>Mga Sagot/Answers</td>
+					<td>An array of possible answers with same identification of the original one.</td>
+				</tr>
+			</table>
+			<p>Sample code (NodeJs Axios)</p>
+			<pre>
+				<code>
+const axios = require("axios")
+async function bugtong(){
+	let output = await axios.get("https://api-pinoy-bugtong.vercel.app/").then((result) => {
+		return result.data
+	}).catch((error) => {
+		console.error("Error [Api Riddle]: " + error)
+		return null
+	})
+	return output
+}
+
+module.exports = async () => {
+	let data = await bugtong()
+	if(data == null){
+		console.log("Check your console")
+	}else{
+		console.log(data)
+	}
+}
+				</code>
+			</pre>
+			<p>Results: </p>
+			<pre>
+				<code>
+{
+	"b": "Sample Riddle",
+	"s": [
+		"Sample Answer",
+		"Sample Answer",
+	]
+}
+				</code>
+			</pre>
+		</div>
+		<div class="foot">
+			<h5>Developed by MPOP Reverse II</h5>
+		</div>
+	</body>
+</html>
