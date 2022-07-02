@@ -31,7 +31,10 @@ module.exports = async () => {
 ``` JSON
 {
 	"b": "Sample Riddle",
-	"s": "Sample Answer"
+	"s": [
+		"Sample Answer",
+		"Sample Answer",
+	]
 }
 ```
 
