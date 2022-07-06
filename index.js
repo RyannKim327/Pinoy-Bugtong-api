@@ -54,7 +54,7 @@ app.get("/", (req, res) => {
 			] // 7
 		},
 		{
-			"b": atob("U2EgdW1hZ2EneSBtYXkgdGF0bG9uZyBwYWEsIHNhIHRhbmdoYWxpIGF5IGRhbGF3YW5nIHBhYSwgYXQgc2EgcGFnc2FwaXQgbmcgZ2FiaSBheSBtYXkgdGF0bG9uZyBwYWEu"),
+			"b": atob("U2EgdW1hZ2EneSBhcGF0IGFuZyBwYWEsIHNhIHRhbmdoYWxpJ3kgZGFsYXdhLCBhdCBzYSBwYWdzYXBpdCBuZyBnYWJpJ3kgYW5nIHBhYSBheSB0YXRsbyBuYS4="),
 			"s": [
 				atob("dGFv")
 			] // 8
