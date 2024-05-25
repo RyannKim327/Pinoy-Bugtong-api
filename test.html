@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Test</title>
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+  </head>
+  <body>
+    <div>
+      Question: <input type="text" id="questions" /><br />
+      Answer: <input type="text" id="answer" /><br />
+      <input type="button" onclick="send()" value="Submit" />
+    </div>
+    <script>
+      const a = (b) => {
+        return document.querySelector(b);
+      };
+      async function send() {
+        let data = await fetch(
+          `/a?q=${encodeURI(a("#questions").value)}&a=${encodeURI(a("#answer").value)}`,
+        )
+          .then((r) => {
+            return r.json();
+          })
+          .then((r) => {
+            alert(r.done);
+            a("#questions").value = "";
+            a("#answer").value = "";
+          });
+      }
+    </script>
+  </body>
+</html>
