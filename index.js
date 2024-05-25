@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
 })
 
 app.get("/question", (req, res) => {		
-	const data = JSON.parse(fs.readFileSync("data/sets.json"))
+	const data = JSON.parse(fs.readFileSync("data/sets.json", "utf8"))
 	const key = Object.keys(data)
 	const n = Math.floor(Math.random() * key.length)
 	const quest = atob(data[key[n]]['question'])
